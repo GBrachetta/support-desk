@@ -1,0 +1,22 @@
+{
+  "name": "support-desk",
+  "version": "1.0.0",
+  "description": "Ticketing support desk",
+  "main": "server.js",
+  "author": "Guillermo Brachetta",
+  "license": "MIT",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "dotenv": "^14.3.2",
+    "express": "^4.17.2",
+    "mongoose": "^6.1.8"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
