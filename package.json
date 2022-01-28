@@ -35,7 +35,8 @@
   "eslintConfig": {
     "extends": "@gbrachetta/eslint-config",
     "rules": {
-      "no-underscore-dangle": "off"
+      "no-underscore-dangle": "off",
+      "no-console": "off"
     }
   },
   "prettier": "@gbrachetta/prettier-config"
