@@ -32,7 +32,10 @@
     "prettier": "^2.5.1"
   },
   "eslintConfig": {
-    "extends": "@gbrachetta/eslint-config"
+    "extends": "@gbrachetta/eslint-config",
+    "rules": {
+      "no-underscore-dangle": "off"
+    }
   },
   "prettier": "@gbrachetta/prettier-config"
 }
