@@ -1,10 +1,14 @@
+/* eslint-disable no-shadow */
 /* eslint-disable no-param-reassign */
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 import authService from './authService';
 
+// Get user from local storage
+const user = JSON.parse(localStorage.getItem('user'));
+
 const initialState = {
-  user: null,
+  user: user || null,
   isError: false,
   isSuccess: false,
   isLoading: false,
@@ -30,8 +34,14 @@ export const register = createAsyncThunk(
   },
 );
 
+// eslint-disable-next-line no-shadow
 export const login = createAsyncThunk('auth/login', async (user, thunkApi) => {
   console.log(user);
+});
+
+// Logout user
+export const logout = createAsyncThunk('auth/logout', async () => {
+  await authService.logout();
 });
 
 export const authSlice = createSlice({
@@ -59,6 +69,9 @@ export const authSlice = createSlice({
         state.isLoading = false;
         state.isError = true;
         state.message = action.payload;
+        state.user = null;
+      })
+      .addCase(logout.fulfilled, (state) => {
         state.user = null;
       });
   },
