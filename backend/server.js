@@ -2,7 +2,8 @@ const express = require('express');
 const dotenv = require('dotenv');
 const colors = require('colors');
 
-const router = require('./routes/userRoutes');
+const userRouter = require('./routes/userRoutes');
+const ticketRouter = require('./routes/ticketRoutes');
 const { errorHandler } = require('./middleware/errorMiddleware');
 const connectDB = require('./config/db');
 
@@ -21,7 +22,8 @@ app.get('/', (req, res) => {
   res.status(200).json({ message: 'Welcome to the support desk API' });
 });
 
-app.use('/api/users', router);
+app.use('/api/users', userRouter);
+app.use('/api/tickets', ticketRouter);
 
 app.use(errorHandler);
 
