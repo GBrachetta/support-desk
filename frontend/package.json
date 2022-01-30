@@ -27,7 +27,8 @@
   "eslintConfig": {
     "extends": "@gbrachetta/eslint-config",
     "rules": {
-      "sort-imports": "off"
+      "sort-imports": "off",
+      "import/order": "off"
     }
   },
   "prettier": "@gbrachetta/prettier-config",
