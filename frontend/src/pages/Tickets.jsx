@@ -30,18 +30,22 @@ const Tickets = () => {
     <>
       <BackButton url="/" />
       <h1>Tickets</h1>
-      <div className="tickets">
-        <div className="ticket-headings">
-          <div>Date</div>
-          <div>Product</div>
-          <div>Status</div>
-          <div />
+      {tickets.length > 0 ? (
+        <div className="tickets">
+          <div className="ticket-headings">
+            <div>Date</div>
+            <div>Product</div>
+            <div>Status</div>
+            <div />
+          </div>
+          {tickets.map((ticket) => (
+            // eslint-disable-next-line no-underscore-dangle
+            <TicketItem key={ticket._id} ticket={ticket} />
+          ))}
         </div>
-        {tickets.map((ticket) => (
-          // eslint-disable-next-line no-underscore-dangle
-          <TicketItem key={ticket._id} ticket={ticket} />
-        ))}
-      </div>
+      ) : (
+        <p>There are not tickets yet.</p>
+      )}
     </>
   );
 };
