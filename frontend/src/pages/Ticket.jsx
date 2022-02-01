@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 
 import BackButton from '../components/BackButton';
 import Spinner from '../components/Spinner';
-import { closeTicket, getTicket, reset } from '../features/tickets/ticketSlice';
+import { closeTicket, getTicket } from '../features/tickets/ticketSlice';
 
 const Ticket = () => {
   const { ticket, isLoading, isError, message } = useSelector(
