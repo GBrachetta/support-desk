@@ -25,13 +25,8 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "@gbrachetta/eslint-config",
-    "rules": {
-      "sort-imports": "off",
-      "import/order": "off"
-    }
+    "extends": "react-app"
   },
-  "prettier": "@gbrachetta/prettier-config",
   "browserslist": {
     "production": [
       ">0.2%",
