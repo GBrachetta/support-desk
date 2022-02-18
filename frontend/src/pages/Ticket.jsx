@@ -31,11 +31,11 @@ const Ticket = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [noteText, setNoteText] = useState('');
   const { ticket, isLoading, isError, message } = useSelector(
-    (state) => state.tickets,
+    (state) => state.tickets
   );
 
   const { notes, isLoading: notesIsLoading } = useSelector(
-    (state) => state.notes,
+    (state) => state.notes
   );
 
   const navigate = useNavigate();
