@@ -30,7 +30,7 @@ const NewTicket = () => {
       navigate('/tickets');
     }
 
-    dispatch(reset());
+    return () => dispatch(reset());
   }, [dispatch, isError, isSuccess, message, navigate]);
 
   const onSubmit = (e) => {
