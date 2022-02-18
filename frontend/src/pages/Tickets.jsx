@@ -43,7 +43,11 @@ const Tickets = () => {
       The Link below redirects to NewTicket.jsx, but it's redirected back here
       because somehow isSuccess is not resetting to false, I believe.
       */}
-      <Link to="/new-ticket" className="btn btn-reverse btn-block">
+      <Link
+        to="/new-ticket"
+        className="btn btn-reverse btn-block"
+        onClick={() => dispatch(reset())}
+      >
         New Ticket
       </Link>
     </>
